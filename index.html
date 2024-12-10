@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Mordelona</title>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  body {
+    background-color: #f5f5f5;
+  }
+  .header {
+    padding: 20px;
+    text-align: center;
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .header h1 {
+    color: #333;
+    font-size: 36px;
+  }
+  .topnav {
+    background-color: #ffd600;
+    overflow: hidden;
+    box-shadow: 0px 4px 2px -2px gray;
+  }
+  .topnav a {
+    float: left;
+    display: block;
+    color: #333;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .topnav a:hover {
+    background-color: #fff;
+    color: #ffd600;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+  }
+  .card {
+    background-color: #fff;
+    margin: 15px;
+    padding: 20px;
+    width: 300px;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s;
+  }
+  .card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+  .card h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  .card p {
+    color: #666;
+  }
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #fff;
+    border-top: 1px solid #e5e5e5;
+    margin-top: 20px;
+  }
+  .detail {
+    display: none;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 15px;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>La Mordelona</h1>
+</div>
+
+<div class="topnav">
+  <a href="#home">Inicio</a>
+  <a href="#food">Alimentos</a>
+  <a href="#medic">Medicamentos</a>
+  
+</div>
+
+<div class="container" id="cardList">
+  <div class="card" onclick="showDetail('Instrucciones', 'Cachorros y razas/tallas pequeñas 1 tableta 2 veces al día, Razas/tallas medianas-grandes 2 tabetas 2 veces al día, Razas/tallas grandes – extragrandes 3 tabletas 2 veces al día.')">
+    <img src="Proyecto/Nueva carpeta/calmi.jpg" alt="Mascota 1">
+    <h2>Calmi Pet</h2>
+    <p>Auxiliar en condiciones de estres, ansiedad e hiperactividad en perros Contenido: 200 tabletas  Ingredientes Activos: Valerina y Passiflora Modo de empleo: Vía de administración: Oral. Cachorros y razas/tallas pequeñas 1 tableta.</p>
+  </div>
+  <div class="card" onclick="showDetail('Instrucciones', 'Este producto viene en una caja con tres tabletas, diseñadas para ser de fácil administración a tu mascota.')">
+    <img src="Proyecto/Nueva carpeta/nexgard.jpg" alt="Mascota 2">
+    <h2>NextGard</h2>
+    <p>NEXGARD SPECTRA 15 KG a 30 KG X3 TAB es un producto antipulgas y antigarrapatas para perros de 15 a 30 kg de peso. </p>
+  </div>
+  <div class="card" onclick="showDetail('Instrucciones', 'Perros: 1-2 tabletas por cada 10 kg de peso vivo. Gatos: ½ tableta por cada 5 kg de peso vivo. Frecuencia: Cada 24 horas durante dos semanas.')">
+    <img src="Proyecto/Nueva carpeta/micofin.webp" alt="Mascota 3">
+    <h2>Micofin</h2>
+    <p>Antimicótico oral en tabletas, indicado para el tratamiento y control de las infecciones micóticas de la piel (Tiña) y garras, causadas por dermatofitos (Microsporum spp, Trichophyton spp . y Epidermophyton floccosum ) y de las infecciones cutáneas causadas por levaduras del género Candida (Candida albicans ); en donde la terapia tópica está limitada y en base a la extensión y severidad de la infección, en Perros y Gatos. </p>
+  </div>
+    <div class="card" onclick="showDetail('Instrucciones', 'Proporcionar suplementos dietéticos especialmente diseñados para gatos para mantener la salud del tracto urinario a traves de gotas.')">
+    <img src="Proyecto/Nueva carpeta/yegi.webp" alt="Mascota 3">
+    <h2>Yegibon</h2>
+    <p>Gotas naturales para el tratamiento de infecciones del tracto urinario en gatos D5Q4 </p>
+  </div>
+    <div class="card" onclick="showDetail('Instrucciones', 'Mezcle la porción apropiada con 8 oz. de agua fresca del grifo. Cambie el agua dos veces al día. Puede duplicar o triplicar la dosis para alcanzar el efecto deseado. ¡Combina con FeatherUp! un pájaro multivitamínico con biotina, que apoya el crecimiento saludable de las plumas.')">
+    <img src="Proyecto/Nueva%20carpeta/unr.jpg" alt="Mascota 3">
+    <h2>UnRuffledRx</h2>
+    <p>Para loros de todos los tamañosNo tóxicos, no sedantes fórmulas de grado humano. Compuesto natural basado en evidencias que se encuentra en el té verde para gestionar comportamientos dañinos inducidos por el estrés como picking de plumas y gritos. </p>
+  </div>
+    <div class="card" onclick="showDetail('Instrucciones', 'Agite bien antes de usar. Aplique directamente en la boca de la mascota cada 4 horas o mezcle con la comida. Consulte a un veterinario para el uso de este producto en mascotas de menos de 5 libras.')">
+    <img src="Proyecto/Nueva%20carpeta/pecti.png" alt="Mascota 3">
+    <h2>Pectilina</h2>
+    <p>Ayuda a aliviar la diarrea o las heces sueltas en perros y gatos. </p>
+  </div>
+</div>
+
+<div class="detail" id="detailView">
+  <h2 id="detailTitle"></h2>
+  <p id="detailDescription"></p>
+</div>
+
+<div class="footer">
+  <p>Usamos cookies para mejorar tu experiencia en La Mordelona.</p>
+</div>
+
+<script>
+  function showDetail(title, description) {
+    document.getElementById('detailTitle').innerText = title;
+    document.getElementById('detailDescription').innerText = description;
+    document.getElementById('detailView').style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
